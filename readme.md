@@ -11,10 +11,13 @@
 
 * https://www.libreoffice.org/download/download-libreoffice/
 
+***Это независимые приложения, можно нагрузить любое***
+
 # Применяю такие аргументы 
 
 ``` java
 var t4 = ProgramPdf24Wrapper.RunProcessAsync(@"c:\Program Files\PDF24\pdf24-DocTool.exe", "-convertToPDF -noProgress -profile default/good -outputFile c:\\Users\\a_zub\\Downloads\\anketa4.pdf c:\\Users\\a_zub\\Downloads\\анкета.docx");
 ```
 
-чтобы превратить docx в pdf
+чтобы превратить docx в pdf, через PDF24
+
