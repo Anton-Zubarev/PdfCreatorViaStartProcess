@@ -1,8 +1,7 @@
-﻿using PdfSharp.Drawing;
+﻿using System.Drawing;
+using PdfSharp.Drawing;
 using PdfSharp.Pdf;
 using PdfSharp.Pdf.IO;
-using System.Drawing;
-using System.IO;
 
 public class PdfFacsimileAdder
 {
