@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-class ProgramPdf24Wrapper
+public class ProgramPdf24Wrapper
 {
     private static readonly SemaphoreSlim semaphore = new SemaphoreSlim(2, 4);
 
