@@ -26,7 +26,7 @@ public class ProgramPdf24Wrapper
 
                 if (!exited)
                 {
-                    process.Kill();
+                    process.Kill(true);
                     Console.WriteLine($"Процесс {programPath} был уничтожен из-за тайм-аута.");
                     return -1;
                 }
