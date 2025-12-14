@@ -49,3 +49,4 @@ var newPdf = PdfFacsimileAdder.AddFacsimile(
 );
 ````
 
+В ветке **feature/windows-service** сделал виндовс службой
