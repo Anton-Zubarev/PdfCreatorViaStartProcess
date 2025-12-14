@@ -16,6 +16,7 @@ static async Task Main(string[] args)
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Console.WriteLine($"Процесс 1 завершился с кодом: {exitCode1}");
 
+    if (exitCode1 != 0) throw new Exception("Ошибка pdf24-DocTool");
     
     var pdfBytes = File.ReadAllBytes("c:\\Users\\a_zub\\Downloads\\anketa1.pdf");
 

@@ -2,7 +2,7 @@
 
 public class ProgramPdf24Wrapper
 {
-    private static readonly SemaphoreSlim semaphore = new SemaphoreSlim(2, 4);
+    private static readonly SemaphoreSlim semaphore = new SemaphoreSlim(1, 1);
 
 
 
@@ -16,8 +16,10 @@ public class ProgramPdf24Wrapper
                 FileName = programPath,
                 Arguments = arguments,
                 RedirectStandardOutput = true,
+                WindowStyle = ProcessWindowStyle.Hidden,
                 UseShellExecute = false,
-                CreateNoWindow = true
+                CreateNoWindow = true,
+                LoadUserProfile = true, // IMPORTANT for windows service
             };
 
             using (Process process = Process.Start(startInfo))
