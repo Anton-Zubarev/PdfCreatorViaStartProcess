@@ -49,3 +49,12 @@ var newPdf = PdfFacsimileAdder.AddFacsimile(
 );
 ````
 
+## Тут виндовс службой сделано
+
+И **важно** установить
+
+```LoadUserProfile = true,```
+
+в *Pdf24Wrapper*.cs
+
+Службу запускаю под своей учеткой.
