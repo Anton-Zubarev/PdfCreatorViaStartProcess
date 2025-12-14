@@ -2,13 +2,13 @@
 
 public class ProgramPdf24Wrapper
 {
-    private static readonly SemaphoreSlim semaphore = new SemaphoreSlim(2, 4);
+    private static readonly SemaphoreSlim semaphore = new SemaphoreSlim(1, 1);
 
 
 
     public static async Task<int> RunProcessAsync(string programPath, string arguments)
     {
-        await semaphore.WaitAsync();
+        semaphore.Wait();
         try
         {
             ProcessStartInfo startInfo = new ProcessStartInfo
@@ -16,8 +16,10 @@ public class ProgramPdf24Wrapper
                 FileName = programPath,
                 Arguments = arguments,
                 RedirectStandardOutput = true,
+                WindowStyle = ProcessWindowStyle.Hidden,
                 UseShellExecute = false,
-                CreateNoWindow = true
+                CreateNoWindow = true,
+                LoadUserProfile = true, // important for windows service
             };
 
             using (Process process = Process.Start(startInfo))
