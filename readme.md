@@ -58,3 +58,9 @@ var newPdf = PdfFacsimileAdder.AddFacsimile(
 в *Pdf24Wrapper*.cs
 
 Службу запускаю под своей учеткой.
+
+Вообще со службой над PDF24 возникли проблемы.
+
+PDF24 хранит данные и свои профили в реестре виндовс. А виндовс-служба не имеет доступа в эту ветку реестра.
+
+HKEY_CURRENT_USER (HKCU): A service **should not** access HKEY_CURRENT_USER or HKEY_CLASSES_ROOT directly, especially when not impersonating a specific interactive user. HKCU maps to the registry hive of the user account currently associated with the service's process, which is often a non-interactive service account (like LocalService) and not the user currently logged into the desktop. Attempting to use HKCU from a service may lead to unexpected behavior or failures. 
